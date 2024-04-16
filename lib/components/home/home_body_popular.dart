@@ -17,10 +17,12 @@ class HomeBodyPopular extends StatelessWidget {
       ),
     );
   }
-  Widget _buildPopularTitle(){
+
+  Widget _buildPopularTitle() {
     return SizedBox();
   }
-  Widget _buildPopularList(){
+
+  Widget _buildPopularList() {
     return Wrap(
       children: [
         HomeBodyPopularItem(id: 0),
@@ -30,4 +32,5 @@ class HomeBodyPopular extends StatelessWidget {
         HomeBodyPopularItem(id: 2),
       ],
     );
+  }
 }
