@@ -34,7 +34,15 @@ class HomeBodyPopularItem extends StatelessWidget {
     );
   }
   Widget _buildPopularItemImage(){
-    return SizedBox();
+    return Column(
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: Image.asset("assets/${popularList[id]}", fit: BoxFit.cover),
+        ),
+        SizedBox(height: gap_s),
+      ],
+    );
   }
   Widget _buildPopularItemStar(){
     return SizedBox();
