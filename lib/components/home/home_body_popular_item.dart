@@ -76,6 +76,22 @@ class HomeBodyPopularItem extends StatelessWidget {
     );
   }
   Widget _buildPopularItemUserInfo(){
-    return SizedBox();
+    return Row(
+      children: [
+        CircleAvatar(
+          backgroundImage: AssetImage("assets/p1.jpeg"),
+        ),
+        SizedBox(width: gap_s),
+        Column(
+          children: [
+            Text(
+              "데어",
+              style: subtitle1(),
+            ),
+            Text("한국"),
+          ],
+        ),
+      ],
+    );
   }
 }
