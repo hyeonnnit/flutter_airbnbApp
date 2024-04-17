@@ -1,5 +1,6 @@
 import 'package:airbnb_app/constants.dart';
 import 'package:airbnb_app/size.dart';
+import 'package:airbnb_app/styles.dart';
 import 'package:flutter/material.dart';
 
 class HomeBodyPopularItem extends StatelessWidget {
@@ -62,7 +63,17 @@ class HomeBodyPopularItem extends StatelessWidget {
     );
   }
   Widget _buildPopularItemComment(){
-    return SizedBox();
+    return Column(
+      children: [
+        Text(
+          "깔끔하고 다 갖춰져 있어서 좋았아요:)",
+          style: body1(),
+          maxLines: 3,
+          overflow: TextOverflow.ellipsis,
+        ),
+        SizedBox(height: gap_s),
+      ],
+    );
   }
   Widget _buildPopularItemUserInfo(){
     return SizedBox();
