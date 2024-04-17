@@ -1,4 +1,5 @@
 import 'package:airbnb_app/components/common/common_form_field.dart';
+import 'package:airbnb_app/constants.dart';
 import 'package:airbnb_app/size.dart';
 import 'package:airbnb_app/styles.dart';
 import 'package:flutter/cupertino.dart';
@@ -92,6 +93,24 @@ class HomeHeaderForm extends StatelessWidget {
   }
 
   Widget _buildFormSubmit() {
-    return SizedBox();
+    return SizedBox(
+      width: double.infinity,
+      height: 50,
+      child: TextButton(
+        style: TextButton.styleFrom(
+          backgroundColor: kAccentColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
+        onPressed: () {
+          print("서브밋 클릭됨");
+        },
+        child: Text(
+          "검색",
+          style: subtitle1(mColor: Colors.white),
+        ),
+      ),
+    );
   }
 }
