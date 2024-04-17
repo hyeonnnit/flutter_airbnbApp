@@ -1,4 +1,5 @@
 import 'package:airbnb_app/size.dart';
+import 'package:airbnb_app/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +33,20 @@ class HomeHeaderForm extends StatelessWidget {
     );
   }
   Widget _buildFormTitle(){
-    return SizedBox();
+    return Column(
+      children: [
+        Text(
+          "모두의 숙소에서 숙소를 검색하세요.",
+          style: h4(),
+        ),
+        SizedBox(height: gap_xs),
+        Text(
+          "혼자하는 여행에 적합한 개인실부터 여럿이 함께하는 여행에 좋은 '공간전체' 숙소까지, 모두의 숙소에 다 있습니다.",
+          style: body1(),
+        ),
+        SizedBox(height: gap_m),
+      ],
+    );
   }
   Widget _buildFormField(){
     return SizedBox();
