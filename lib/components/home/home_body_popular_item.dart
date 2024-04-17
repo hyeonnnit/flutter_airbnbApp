@@ -1,3 +1,4 @@
+import 'package:airbnb_app/constants.dart';
 import 'package:airbnb_app/size.dart';
 import 'package:flutter/material.dart';
 
@@ -45,7 +46,20 @@ class HomeBodyPopularItem extends StatelessWidget {
     );
   }
   Widget _buildPopularItemStar(){
-    return SizedBox();
+    return Column(
+      children: [
+        Row(
+          children: [
+            Icon(Icons.star, color: kAccentColor),
+            Icon(Icons.star, color: kAccentColor),
+            Icon(Icons.star, color: kAccentColor),
+            Icon(Icons.star, color: kAccentColor),
+            Icon(Icons.star, color: kAccentColor),
+          ],
+        ),
+        SizedBox(height: gap_s),
+      ],
+    );
   }
   Widget _buildPopularItemComment(){
     return SizedBox();
