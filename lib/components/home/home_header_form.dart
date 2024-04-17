@@ -1,3 +1,4 @@
+import 'package:airbnb_app/components/common/common_form_field.dart';
 import 'package:airbnb_app/size.dart';
 import 'package:airbnb_app/styles.dart';
 import 'package:flutter/cupertino.dart';
@@ -32,7 +33,8 @@ class HomeHeaderForm extends StatelessWidget {
       ),
     );
   }
-  Widget _buildFormTitle(){
+
+  Widget _buildFormTitle() {
     return Column(
       children: [
         Text(
@@ -48,10 +50,48 @@ class HomeHeaderForm extends StatelessWidget {
       ],
     );
   }
-  Widget _buildFormField(){
-    return SizedBox();
+
+  Widget _buildFormField() {
+    return Column(
+      children: [
+        CommonFormField(
+          hintText: "근처 추천 장소",
+          prifixText: "위치",
+        ),
+        SizedBox(height: gap_s),
+        Row(
+          children: [
+            Expanded(
+              child: CommonFormField(
+                prifixText: "체크 아웃",
+                hintText: "날짜 입력",
+              ),
+            ),
+          ],
+        ),
+        SizedBox(height: gap_s),
+        Row(
+          children: [
+            Expanded(
+              child: CommonFormField(
+                prifixText: "성인",
+                hintText: "2",
+              ),
+            ),
+            Expanded(
+              child: CommonFormField(
+                prifixText: "어린이",
+                hintText: "0",
+              ),
+            ),
+          ],
+        ),
+        SizedBox(height: gap_m),
+      ],
+    );
   }
-  Widget _buildFormSubmit(){
+
+  Widget _buildFormSubmit() {
     return SizedBox();
   }
 }
