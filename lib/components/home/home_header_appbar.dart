@@ -1,7 +1,6 @@
 import 'package:airbnb_app/constants.dart';
 import 'package:airbnb_app/size.dart';
 import 'package:airbnb_app/styles.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeHeaderAppBar extends StatelessWidget {
